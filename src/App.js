@@ -6,7 +6,8 @@ import LoginPage from './components/pages/LoginPage'
 import RegisterPage from './components/pages/RegisterPage'
 import ForgetPasswordPage from './components/pages/ForgetPasswordPage'
 import HomePage from './components/pages/HomePage'
-
+import { YoutubeEmbed } from './components/pages/YoutubeEmbed'
+import Quiz from './components/pages/Quiz'
 import './App.css'
 
 export default function App() {
@@ -17,29 +18,30 @@ export default function App() {
                     <Route exact path="/" component={ LandingPage } />
                     <Route path="/login" component={ LoginPage } />
                     <Route path="/register" component={ RegisterPage } />
+                    <Route path="/demo" component={YoutubeEmbed} />
+                    <Route path="/quiz" component={Quiz} />
                     <Route path="/forget-password" component={ ForgetPasswordPage } />
                     <Route path="/home" component={ HomePage } />
                 </Switch>
-                <Footer />
             </div>
         </Router>
     )
 }
 
-const Footer = () => {
-    return (
-        <p className="text-center" style={ FooterStyle }>Designed & coded by <a href="https://izemspot.netlify.com" target="_blank" rel="noopener noreferrer">IZEMSPOT</a></p>
-    )
-}
+// const Footer = () => {
+//     return (
+//         <p className="text-center" style={ FooterStyle }>Designed & coded by <a href="https://izemspot.netlify.com" target="_blank" rel="noopener noreferrer">IZEMSPOT</a></p>
+//     )
+// }
 
-const FooterStyle = {
-    background: "#222",
-    fontSize: ".8rem",
-    color: "#fff",
-    position: "absolute",
-    bottom: 0,
-    padding: "1rem",
-    margin: 0,
-    width: "100%",
-    opacity: ".5"
-}
+// const FooterStyle = {
+//     background: "#222",
+//     fontSize: ".8rem",
+//     color: "#fff",
+//     position: "absolute",
+//     bottom: 0,
+//     padding: "1rem",
+//     margin: 0,
+//     width: "100%",
+//     opacity: ".5"
+// }
