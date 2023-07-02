@@ -105,4 +105,4 @@ predictions = saved_model.predict(input_image)
 predicted_class = np.argmax(predictions[0])
 
 # Print the predicted class
-print("Predicted Class:", predicted_class)
+print("Predicted Class:",  list(train_generator.class_indices.keys())[predicted_class])
